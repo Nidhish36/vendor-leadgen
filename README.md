@@ -1,6 +1,6 @@
-# GoPearch | B2B Vendor Lead-Gen & Verification Portal
+# Vendor Lead-Gen Portal
 
-> An intelligent, automated B2B lead discovery and website verification engine with a minimalist industrial UI.
+> An automated B2B lead discovery and website verification engine built for GoPearch with a minimalist industrial UI.
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
@@ -15,7 +15,7 @@
 
 ## Overview
 
-**GoPearch** is an end-to-end B2B sales enablement platform designed to streamline prospecting. It queries local commercial business listings via the **Google Places API v1 (New)**, caches search queries in **Redis** for cost efficiency, stores persistent lead records in **PostgreSQL**, and automatically deploys asynchronous **Celery + Playwright** worker nodes to crawl official vendor websites. 
+**Vendor Lead-Gen Portal** is an internal B2B sales enablement platform built for **GoPearch** to streamline commercial prospecting. It queries local business listings via the **Google Places API v1 (New)**, caches search queries in **Redis** for cost efficiency, stores persistent lead records in **PostgreSQL**, and automatically deploys asynchronous **Celery + Playwright** worker nodes to crawl official vendor websites. 
 
 The crawler executes dynamic JavaScript single-page apps (SPAs) to discover authentic contact info (phone numbers, emails, contact sub-pages, and social media handles), standardizes phone numbers using Google's international **libphonenumber** library, and highlights mismatches against Google Maps data.
 
@@ -47,22 +47,22 @@ Experience zero-setup remote sharing: run the local Vite proxy and ngrok tunnel 
 
 ### 1. Overview Dashboard
 *Displays macro metrics (Total Leads, Verified, Mismatched, Dead Sites) with clickable quick-filter cards.*  
-![GoPearch Dashboard Overview](screenshots/overview.png)  
+![Dashboard Overview](screenshots/overview.png)  
 *(Insert screenshot of the Overview tab with metric cards and node status)*
 
 ### 2. Lead Finder & Pagination
 *Keyword and location search console with real-time lead results and "Load More" pagination.*  
-![GoPearch Lead Finder](screenshots/search.png)  
+![Lead Finder](screenshots/search.png)  
 *(Insert screenshot of the Lead Finder tab after running a query)*
 
 ### 3. Saved Leads & Verification Status
 *Detailed lead database showing verification badges (Verified, Mismatch, Dead Site, Unverified) and contact drawer triggers.*  
-![GoPearch Saved Leads](screenshots/leads.png)  
+![Saved Leads](screenshots/leads.png)  
 *(Insert screenshot of the Saved Leads table with diverse status badges)*
 
 ### 4. Interactive Map View
 *OpenStreetMap interface plotting discovered vendor coordinates with glowing pulse pins.*  
-![GoPearch Interactive Map View](screenshots/map.png)  
+![Interactive Map View](screenshots/map.png)  
 *(Insert screenshot of the Map View tab focused on plotted lead coordinates)*
 
 ---
