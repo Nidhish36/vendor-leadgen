@@ -43,7 +43,6 @@ Run the local services to execute discovery searches, trigger background scrapin
 
 ## Screenshots
 
-> *Place your screenshots into a `screenshots/` directory at the project root with the matching filenames:*
 
 ### 1. Overview Dashboard
 *Displays macro metrics (Total Leads, Verified, Mismatched, Dead Sites) with clickable quick-filter cards.*  
