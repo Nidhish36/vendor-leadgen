@@ -8,8 +8,9 @@ class VendorOut(BaseModel):
     address: Optional[str] = None
     phone: Optional[str] = None
     website: Optional[str] = None
-    rating: Optional[float] = None
     business_status: Optional[str] = None
+    scraped_phone: Optional[str] = None
+    scraped_email: Optional[str] = None
     verification_status: str
 
     class Config:

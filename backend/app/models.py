@@ -11,13 +11,15 @@ class Vendor(Base):
     address = Column(String)
     latitude = Column(Float)
     longitude = Column(Float)
-    phone = Column(String)
+    phone = Column(String)           # from Google Places
     website = Column(String)
-    rating = Column(Float)
     business_status = Column(String)
+    scraped_phone = Column(String)   # from scraping
+    scraped_email = Column(String)   # from scraping
     verification_status = Column(String, default="unverified")
     source_keyword = Column(String)
     created_at = Column(DateTime, server_default=func.now())
+    last_scraped_at = Column(DateTime, nullable=True)
 
 
 class Search(Base):
@@ -28,3 +30,15 @@ class Search(Base):
     location = Column(String)
     result_count = Column(Integer, default=0)
     run_at = Column(DateTime, server_default=func.now())
+
+
+class ScrapeJob(Base):
+    __tablename__ = "scrape_jobs"
+
+    id = Column(Integer, primary_key=True, index=True)
+    vendor_id = Column(Integer, nullable=False)
+    status = Column(String, default="queued")  # queued/running/done/failed
+    attempts = Column(Integer, default=0)
+    error_message = Column(String, nullable=True)
+    started_at = Column(DateTime, server_default=func.now())
+    finished_at = Column(DateTime, nullable=True)

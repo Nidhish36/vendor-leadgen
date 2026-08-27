@@ -13,7 +13,6 @@ class GooglePlacesProvider(PlacesProvider):
         "places.location",
         "places.nationalPhoneNumber",
         "places.websiteUri",
-        "places.rating",
         "places.businessStatus",
     ])
 
@@ -47,7 +46,6 @@ class GooglePlacesProvider(PlacesProvider):
                 "longitude": place.get("location", {}).get("longitude"),
                 "phone": place.get("nationalPhoneNumber"),
                 "website": place.get("websiteUri"),
-                "rating": place.get("rating"),
                 "business_status": place.get("businessStatus"),
             })
 
