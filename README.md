@@ -47,23 +47,22 @@ Run the local services to execute discovery searches, trigger background scrapin
 
 ### 1. Overview Dashboard
 *Displays macro metrics (Total Leads, Verified, Mismatched, Dead Sites) with clickable quick-filter cards.*  
-![Dashboard Overview](screenshots/overview.png)  
-*(Insert screenshot of the Overview tab with metric cards and node status)*
+ <img width="1917" height="927" alt="image" src="https://github.com/user-attachments/assets/64ead1b7-a011-4c29-9eee-81d9c5e86499" />
+
 
 ### 2. Lead Finder & Pagination
 *Keyword and location search console with real-time lead results and "Load More" pagination.*  
-![Lead Finder](screenshots/search.png)  
-*(Insert screenshot of the Lead Finder tab after running a query)*
+<img width="1917" height="927" alt="image" src="https://github.com/user-attachments/assets/a53dd65f-ea37-4797-957a-420a4b23849a" />
 
 ### 3. Saved Leads & Verification Status
 *Detailed lead database showing verification badges (Verified, Mismatch, Dead Site, Unverified) and contact drawer triggers.*  
-![Saved Leads](screenshots/leads.png)  
-*(Insert screenshot of the Saved Leads table with diverse status badges)*
+<img width="1917" height="933" alt="image" src="https://github.com/user-attachments/assets/8e1cfada-94f0-4928-8fc1-2b0d099be364" />
+
 
 ### 4. Interactive Map View
 *OpenStreetMap interface plotting discovered vendor coordinates with glowing pulse pins.*  
-![Interactive Map View](screenshots/map.png)  
-*(Insert screenshot of the Map View tab focused on plotted lead coordinates)*
+<img width="1917" height="927" alt="image" src="https://github.com/user-attachments/assets/d1efcd77-ed1c-4b33-ba8a-0c0ded17bf8e" />
+
 
 ---
 
