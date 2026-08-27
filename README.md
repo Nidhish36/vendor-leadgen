@@ -30,14 +30,14 @@ The crawler executes dynamic JavaScript single-page apps (SPAs) to discover auth
 - **E.164 Phone Normalization:** Cleans and formats phone numbers using Google's `phonenumbers` library to detect discrepancies between public Google listings and actual website contact pages.
 - **Asynchronous Task Queue:** Celery background worker manages scraping tasks asynchronously without blocking API or UI response times.
 - **Interactive OpenStreetMap (Leaflet):** Real-time geographic mapping of leads with custom glowing dot markers, dark/light theme filters, and smart zoom-locking.
-- **Single-Tunnel Reverse Proxy:** Vite dev server reverse proxies `/vendors` and `/search` to FastAPI, enabling full remote access over a single Ngrok tunnel.
+- **Integrated API Reverse Proxy:** Vite development server proxies `/vendors` and `/search` to the FastAPI backend, eliminating CORS issues during local development.
 - **Nothing Tech Industrial Design:** Dot-grid background, typography matching Space Mono, custom status badges, and class-based Dark/Light theme switching.
 
 ---
 
 ## Demo
 
-Experience zero-setup remote sharing: run the local Vite proxy and ngrok tunnel to test discovery searches, background scraping tasks, and map coordinates from desktop or mobile browsers.
+Run the local services to execute discovery searches, trigger background scraping tasks, and view plotted map coordinates directly in your web browser.
 
 ---
 
@@ -87,7 +87,6 @@ Experience zero-setup remote sharing: run the local Vite proxy and ngrok tunnel 
 | | BeautifulSoup4 | HTML parser for anchor and DOM text extraction |
 | | `phonenumbers` | Python port of Google's libphonenumber for E.164 normalization |
 | **DevOps** | Docker & Compose | Multi-container orchestration for PostgreSQL and Redis |
-| | Ngrok | Secure public ingress tunnel for remote testing |
 
 ---
 
@@ -280,11 +279,6 @@ npm run dev
 ```
 *UI will be available at `http://localhost:5173`*
 
-### Terminal 5 (Optional): Remote Ngrok Ingress
-```bash
-npx ngrok http 5173
-```
-
 ---
 
 ## Usage
@@ -357,9 +351,6 @@ Utility scripts are included in the root directory for quick diagnostic testing:
 ---
 
 ## Deployment
-
-### Local Tunnel Testing
-The frontend `vite.config.js` is configured with `allowedHosts: ['.ngrok-free.dev', '.ngrok-free.app', '.loca.lt', '.lhr.life']` and a built-in reverse proxy routing `/vendors` and `/search` to `http://localhost:8000`. Exposing port `5173` via Ngrok or SSH (`localhost.run`) provides full remote access with zero CORS errors.
 
 ### Production Deployment Strategy
 1. **Containerization:** Package the FastAPI backend and Celery worker into Docker images.
